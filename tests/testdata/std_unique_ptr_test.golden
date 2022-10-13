@@ -1,0 +1,23 @@
+Creating widget one
+Destroying widget one
+Creating widget two
+Creating widget three
+Destroying widget three
+Destroying widget two
+Creating widget test return
+Destroying widget test return
+Creating widget make_unique
+Destroying widget make_unique
+Creating widget var args
+Destroying widget var arg
+Creating widget test
+Destroying widget test
+Creating widget reset
+Destroying widget reset
+Creating widget assign
+Destroying widget assign
+Creating widget I have been destroyed
+Destroying widget I have been destroyed
+counter = 10
+PASSED
+# END TEST WITH RETVAL=0

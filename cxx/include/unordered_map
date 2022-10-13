@@ -1,0 +1,158 @@
+#ifndef THIRD_PARTY_NANOLIBC_CXX_INCLUDE_UNORDERED_MAP
+#define THIRD_PARTY_NANOLIBC_CXX_INCLUDE_UNORDERED_MAP
+
+#include <cstdint>
+#include <functional>
+#include <utility>
+#include <vector>
+
+namespace std {
+
+constexpr size_t kInitialHashTableSize = 32;
+
+template <class Key, class T, class Hash = hash<Key> >
+class unordered_map {
+ public:
+  struct Entry {
+    Entry(const Key& f, const T& s) : first(f), second(s), next(SIZE_MAX) {
+      Hash hasher;
+      hash = hasher(f);
+    }
+    Entry() {
+      // The C++11 compiler we use calls a copy constructor of Key and T if we
+      // initialize in the header.
+      Key k;
+      Hash hasher;
+      hash = hasher(k);
+      first = move(k);
+      second = move(T());
+    }
+    Entry(const Key& f, T&& s) {
+      Hash hasher;
+      hash = hasher(f);
+      first = f;
+      second = move(s);
+    }
+    Key first;
+    T second;
+    size_t next = SIZE_MAX;
+    size_t hash;
+  };
+  typedef Entry* iterator;
+  inline iterator begin() const { return entries_.data(); }
+  inline iterator end() const { return entries_.data() + entries_.size(); }
+
+  unordered_map() {
+    hash_table_.resize(kInitialHashTableSize);
+    for (size_t i = 0; i < hash_table_.size(); ++i) {
+      hash_table_[i] = SIZE_MAX;
+    }
+  }
+
+  void erase(const Key& key) {
+    if (entries_.empty()) {
+      return;
+    }
+    iterator entry = find(key);
+    if (entry == end()) {
+      return;
+    }
+    RemoveFromHashTable(entry);
+    iterator last_entry = end() - 1;
+    if (entry != last_entry) {
+      RemoveFromHashTable(last_entry);
+      *entry = move(*last_entry);
+      InsertIntoHashTable(entry);
+    }
+    entries_.pop_back();
+  }
+
+  iterator find(const Key& key) const {
+    Hash hasher;
+    size_t hash_table_index = hasher(key) & (hash_table_.size() - 1);
+    for (iterator entry = EntryFromIndex(hash_table_[hash_table_index]);
+         entry != end(); entry = EntryFromIndex(entry->next)) {
+      if (entry->first == key) {
+        return entry;
+      }
+    }
+    return end();
+  }
+
+  T& operator[](const Key& key) {
+    iterator entry = find(key);
+    if (entry != end()) {
+      return entry->second;
+    }
+    if ((entries_.size() << 1) >= hash_table_.size()) {
+      ExpandHashTable();
+    }
+    entries_.push_back(Entry(key, move(T())));
+    entry = end() - 1;
+    Hash hasher;
+    entry->hash = hasher(key);
+    InsertIntoHashTable(entry);
+    return entry->second;
+  }
+
+  unordered_map<Key, T, Hash>& operator=(unordered_map<Key, T, Hash>&& other) {
+    entries_ = move(other.entries_);
+    hash_table_ = move(other.hash_table_);
+    return *this;
+  }
+
+ private:
+  iterator EntryFromIndex(size_t index) const {
+    if (index == SIZE_MAX) {
+      return end();
+    }
+    return begin() + index;
+  }
+
+  void InsertIntoHashTable(iterator entry) {
+    size_t hash_table_index = entry->hash & (hash_table_.size() - 1);
+    size_t entry_index = entry - begin();
+    size_t next_entry_index = hash_table_[hash_table_index];
+    entry->next = next_entry_index;
+    hash_table_[hash_table_index] = entry_index;
+  }
+
+  void RemoveFromHashTable(iterator entry) {
+    size_t hash_table_index = entry->hash & (hash_table_.size() - 1);
+    iterator prev_entry = end();
+    for (iterator it = EntryFromIndex(hash_table_[hash_table_index]);
+         it != end(); it = EntryFromIndex(it->next)) {
+      if (it == entry) {
+        if (prev_entry == end()) {
+          hash_table_[hash_table_index] = entry->next;
+        } else {
+          prev_entry->next = entry->next;
+        }
+        entry->next = SIZE_MAX;
+        return;
+      }
+      prev_entry = it;
+    }
+  }
+
+  void ExpandHashTable() {
+    hash_table_.resize(hash_table_.size() << 1);
+    for (size_t i = 0; i < hash_table_.size(); ++i) {
+      hash_table_[i] = SIZE_MAX;
+    }
+    for (auto& it : entries_) {
+      InsertIntoHashTable(&it);
+    }
+  }
+
+  vector<Entry> entries_;
+  // Each location in hash_table_ holds the indexes into entries_ which is
+  // the head of a linked list of entries that hash to that location.  The value
+  // SIZE_MAX is used to indicate an NULL entry.  The hash table is always a
+  // power of 2 in size.
+  vector<size_t> hash_table_;
+};
+
+}  // namespace std
+
+#endif  // THIRD_PARTY_NANOLIBC_CXX_INCLUDE_UNORDERED_MAP

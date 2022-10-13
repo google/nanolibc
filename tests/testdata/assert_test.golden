@@ -1,0 +1,2 @@
+Assertion '2 == 3' failed in void test_macro_assert() (third_party/nanolibc/tests/assert_test.c:24)
+# END TEST WITH RETVAL=255

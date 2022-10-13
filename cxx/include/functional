@@ -1,0 +1,40 @@
+#ifndef THIRD_PARTY_NANOLIBC_CXX_INCLUDE_FUNCTIONAL_H_
+#define THIRD_PARTY_NANOLIBC_CXX_INCLUDE_FUNCTIONAL_H_
+
+#include <string>
+#include <unistd.h>
+
+namespace std {
+
+template <class T> class hash {
+ public:
+  hash() {}
+  size_t operator() (const std::string& str) {
+    size_t h = 0xdeadbeef;
+    for (char c : str) {
+      h += c;
+      // Just needs to be odd and have a random-ish bit pattern.
+      h *= 413679843u;
+      // Enables upper bits to mix with lower bits.
+      h ^= h >> 16;
+    }
+    return h;
+  }
+
+  // Hash a size_t.  This should work well whether size_t is 32 or 64 bits.
+  // Multiplication is our fastest non-SIMD mixing primitive.  XORing h >> 16
+  // lets the higher bits mix with a few lower bits, and makes the hash
+  // function non-linear.  Using more rounds should lead to a uniformly
+  // distributed hash, but we're choosing speed over hashing quality here.
+  size_t operator() (size_t value) {
+    size_t h = 0xdeadbeef;
+    h += value;
+    h *= 413679843u;
+    h ^= h >> 16;
+    return h;
+  }
+};
+
+}  // namespace std
+
+#endif  // THIRD_PARTY_NANOLIBC_CXX_INCLUDE_FUNCTIONAL_H_

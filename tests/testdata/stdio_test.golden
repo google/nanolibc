@@ -1,0 +1,22 @@
+fputs() to stderr
+Fun with %!
+printf("1234=%o 00001234=%08o\n", 01234, 01234) -> 1234=1234 00001234=00001234
+printf("|%-14s| |%-16s| d2=%2x |%-30s|\n", "str14", "str16", 0xd2, "12345678901234567890123456789012345") -> |str14         | |str16           | d2=d2 |12345678901234567890123456789012345|
+printf("42=%3d d1=%4.4x |%-4s| d2=%8.8x\n", 42, 0xd1, "string4", 0xd2) -> 42= 42 d1=00d1 |string4| d2=000000d2
+printf("84=%d 21=%ds |%s| |%sOK| d1=%x d2=%#x\n", 84, 21, "hello", "fine", 0xd1, 0xd2) -> 84=84 21=21s |hello| |fineOK| d1=d1 d2=0xd2
+printf("a=%c b=%c space='%c' tab='%c' \\1=%c !=%c\n", 'a', 'b', ' ', '\t', '\1', '!') -> a=a b=b space=' ' tab='	' \1= !=!
+printf("Adddress of main: %p\n", main) -> Adddress of main: 0xREDACTED
+printf("Adddress of stack variable: %p\n", &in_stack) -> Adddress of stack variable: 0xREDACTED
+printf("d1=%016llx d2=%016lx d3=%02x d4=%02X 42=%03d\n", (long long unsigned)0xd1, (long unsigned)0xd2, 0xd3, 0xd4, 42) -> d1=00000000000000d1 d2=00000000000000d2 d3=d3 d4=D4 42=042
+printf("d1=%04x d2=%06x d3=%08x %%100\n", 0xd1, 0xd2, 0xd3) -> d1=00d1 d2=0000d2 d3=000000d3 %100
+printf("d1=%.1x\n", 0xd1) -> d1=d1
+printf("d1=%4.1x\n", 0xd1) -> d1=REDACTED
+printf("d1=%4.x\n", 0xd1) -> d1=REDACTED
+printf("%lld\n", -(1ULL << 63)) -> -9223372036854775808
+printf("%llx\n", -(1ULL << 63)) -> 8000000000000000
+puts() to stdout
+snprintf: result=24, str='Hello |123' (len=10)
+snprintf: result=24, str='Hello | 12' (len=10)
+Test fwrite to stdio
+Test fwrite to stdio
+# END TEST WITH RETVAL=0

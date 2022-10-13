@@ -1,0 +1,278 @@
+/*
+ * Incomplete std::vector implementation.
+ */
+#ifndef THIRD_PARTY_NANOLIBC_CXX_INCLUDE_VECTOR_
+#define THIRD_PARTY_NANOLIBC_CXX_INCLUDE_VECTOR_
+
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <utility>
+
+namespace std {
+
+template <typename T>
+class vector
+{
+ public:
+  typedef T                 value_type;
+  typedef value_type       *pointer;
+  typedef const value_type *const_pointer;
+  typedef value_type       &reference;
+  typedef const value_type &const_reference;
+  typedef pointer           iterator;
+  typedef const_pointer     const_iterator;
+  typedef size_t            size_type;
+  typedef ptrdiff_t         difference_type;
+
+  inline vector (void);
+  inline explicit vector (size_type n);
+  inline vector (const vector<T>& v);
+  inline vector (vector<T>&& v);
+  inline vector (const T* first, const T* last);
+  ~vector (void) throw();
+
+  vector<T>&operator= (const vector<T>& v);
+  vector<T>&operator= (vector<T>&& v);
+  inline void reserve (size_type n) { this->_reserve(n, this->size()); }
+  void resize (size_type n);
+  inline size_type capacity (void) const { return this->_max_nitems; }
+  inline size_type size (void) const { return this->_nitems; }
+  inline void clear (void) { this->resize(0); }
+  inline bool empty (void) const { return (this->_nitems <= 0); }
+  inline iterator begin (void) { return iterator(this->_data); }
+  inline const_iterator begin (void) const { return const_iterator(this->_data); }
+  inline iterator end (void) { return iterator(this->_data + this->size()); }
+  inline const_iterator end (void) const { return const_iterator(this->_data + this->size()); }
+  inline reference at (size_type i);
+  inline const_reference at (size_type i) const;
+  inline iterator erase(iterator it);
+  inline reference operator[] (size_type i) { return this->at(i); }
+  inline const_reference operator[] (size_type i) const { return this->at(i); }
+  iterator insert (const_iterator ip, const T& v);
+  iterator insert (const_iterator ip, const_iterator i1, const_iterator i2);
+  void push_back (const T& v = T());
+  void push_back (T&& v = T());
+  void pop_back();
+  const pointer data() const { return _data; }
+  const value_type& front() const { return *_data; }
+ private:
+  void _reserve (size_type n, size_type copy_only);
+  iterator _insert_hole (const_iterator ip, size_t n);
+  pointer   _data;
+  size_type _max_nitems;
+  size_type _nitems;
+};
+
+} // namespace std
+
+/*
+ * Implementation
+ */
+#include <assert.h>
+#include <stdint.h>
+
+namespace std {
+
+template <typename T>
+inline vector<T>::vector(const T* first, const T* last)
+    : _data(NULL), _max_nitems(0), _nitems(0) {
+  this->resize(last - first);
+  auto p = begin();
+  auto q = first;
+  while (q != last) {
+    *p++ = *q++;
+  }
+}
+
+template <typename T>
+inline vector<T>::vector () : _data(NULL), _max_nitems(0), _nitems(0) { }
+
+template <typename T>
+inline vector<T>::vector (size_type n) : _data(NULL), _max_nitems(0), _nitems(0)
+{
+  this->resize(n);
+}
+
+template <typename T>
+inline vector<T>::vector (const vector<T>& v) : _data(NULL), _max_nitems(0), _nitems(0)
+{
+  this->operator=(v);
+}
+
+template <typename T>
+inline vector<T>::vector (vector<T>&& v) : _data(NULL), _max_nitems(0), _nitems(0)
+{
+  this->operator=(move(v));
+}
+
+template <typename T>
+vector<T>::~vector () throw()
+{
+  this->_nitems = 0;
+  this->_max_nitems = 0;
+  if (this->_data)
+    delete [] this->_data;
+  this->_data = NULL;
+}
+
+template <typename T>
+vector<T>& vector<T>::operator= (const vector<T>& v)
+{
+  this->_reserve(v.size(), 0);
+  this->_nitems = v.size();
+  for (size_type i = 0 ; i < v.size() ; ++i)
+    this->_data[i] = v[i];
+  return *this;
+}
+
+template <typename T>
+vector<T>& vector<T>::operator= (vector<T>&& v)
+{
+  this->_data = move(v.data());
+  this->_max_nitems = v._max_nitems;
+  this->_nitems = v.size();
+  v._data = NULL;
+  v._max_nitems = 0;
+  v._nitems = 0;
+  return *this;
+}
+
+template <typename T>
+void vector<T>::_reserve (size_type n, size_type copy_only)
+{
+  if (n <= this->_max_nitems)
+    return;
+
+  /* n > _max_nitems (implies n > 0), enlarge _max_nitems, try to get
+   * close to a power-of-two size in bytes, > 64B */
+  size_t new_nbytes = 64;
+  size_type new_max_nitems;
+  while ((new_max_nitems = new_nbytes / sizeof(T)) < n) {
+    new_nbytes *= 2;
+  }
+
+  pointer new_data = new T[new_max_nitems];
+
+  for (size_type i = 0 ; i < copy_only ; ++i)
+    new_data[i] = move(this->_data[i]);
+
+  const_pointer orig_data = this->_data;
+  this->_data = new_data;
+  this->_max_nitems = new_max_nitems;
+  if (orig_data)
+    delete [] orig_data;
+}
+
+template <typename T>
+void vector<T>::resize (size_type n)
+{
+  this->reserve(n);
+  for (size_type i = this->_nitems ; i < n ; ++i)
+    this->_data[i] = T();
+  this->_nitems = n;
+}
+
+template <typename T>
+inline typename vector<T>::reference vector<T>::at (size_type i)
+{
+  assert(i < this->size());
+  return this->_data[i];
+}
+
+template <typename T>
+inline typename vector<T>::const_reference vector<T>::at (size_type i) const
+{
+  assert(i < this->size());
+  return this->_data[i];
+}
+
+template <typename T>
+typename vector<T>::iterator vector<T>::_insert_hole (const_iterator ip, size_type n)
+{
+  assert(ip >= this->begin());
+  assert(ip <= this->end());
+  ptrdiff_t idx = ip - this->begin();
+
+  this->_reserve(this->_nitems + n, idx);
+
+  if ((size_type)idx < this->_nitems)
+    for (size_t i = this->_nitems + n - 1 ; i >= idx + n ; --i) {
+      this->_data[i] = this->_data[i - n];
+    }
+
+  this->_nitems += n;
+  return iterator(this->_data + idx);
+}
+
+template <typename T>
+typename vector<T>::iterator vector<T>::insert (const_iterator ip, const T& v)
+{
+  iterator ret = this->_insert_hole(ip, 1);
+  *ret = v;
+  return ret;
+}
+
+template <typename T>
+typename vector<T>::iterator vector<T>::insert (const_iterator ip, const_iterator i1, const_iterator i2)
+{
+  assert(i1 <= i2);
+  const ptrdiff_t n = i2 - i1;
+  if (n <= 0)  // nothing to do
+    return iterator(ip);
+
+  iterator ret = this->_insert_hole(ip, n);
+
+  for (iterator it = ret ; i1 != i2 ; ++i1, ++it)
+    *it = *i1;
+
+  return ret;
+}
+
+template <typename T>
+void vector<T>::push_back (T&& v)
+{
+  this->reserve(this->_nitems + 1);
+  this->_data[this->_nitems] = move(v);
+  this->_nitems += 1;
+}
+
+template <typename T>
+void vector<T>::push_back (const T& v)
+{
+  this->reserve(this->_nitems + 1);
+  this->_data[this->_nitems] = v;
+  this->_nitems += 1;
+}
+
+template <typename T>
+void vector<T>::pop_back ()
+{
+  if (this->_nitems == 0) {
+    fprintf(stderr, "Indexed past end of string buffer in substr.\n");
+    abort();
+  }
+  this->_nitems -= 1;
+  this->_data[this->_nitems] = move(T());  // release existing item
+}
+
+template <typename T>
+typename vector<T>::iterator vector<T>::erase(vector::iterator it) {
+  if (it < begin() || it >= end()) {
+    fprintf(stderr, "Erased element out of range.\n");
+    abort();
+  }
+  *it = move(T());  // release existing item
+  for (auto p = it; p + 1 != end(); ++p) {
+    *p = move(*(p + 1));
+  }
+  _nitems--;
+  return it;
+}
+
+}  // namespace std
+
+
+#endif  // THIRD_PARTY_NANOLIBC_CXX_INCLUDE_VECTOR_

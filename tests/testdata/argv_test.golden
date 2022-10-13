@@ -1,0 +1,6 @@
+argc = 4
+  argv[0] = REDACTED
+  argv[1] = my_arg1
+  argv[2] = my_arg2
+  argv[3] = my_arg3
+# END TEST WITH RETVAL=0

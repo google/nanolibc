@@ -1,0 +1,54 @@
+#ifndef THIRD_PARTY_NANOLIBC_CXX_UTILITY_
+#define THIRD_PARTY_NANOLIBC_CXX_UTILITY_
+
+namespace std {
+
+template <typename T>
+T&& move(T& arg) {
+  return static_cast<T&&>(arg);
+}
+
+// C++11 does not appear to auto-cast a && to a &, unlike more recent versions.
+// If move is called on a right-hand reference, it will not find a matching
+// function without this.
+template <typename T>
+T&& move(T&& arg) {
+  // Apparently, the compiler looks for the cast, and only then will actually
+  // return a right-hand reference.
+  return static_cast<T&&>(arg);
+}
+
+template <typename T>
+T&& forward(T& arg) {
+  return static_cast<T&&>(arg);
+}
+
+template <typename T1, typename T2>
+struct pair {
+  pair(const T1& f, const T2& s) : first(f), second(s) {}
+  pair() {
+    // The C++11 compiler we use calls a copy constructor of T1 and T2 if we
+    // initialize in the header.
+    first = move(T1());
+    second = move(T2());
+  }
+  pair(const T1& f, T2&& s) {
+    first = f;
+    second = move(s);
+  }
+  pair(T1&& f, const T2& s) : first(move(f)), second(s) {}
+  pair(T1&& f, T2&& s) : first(move(f)), second(move(s)) {}
+  pair(const pair& p) : first(p.first), second(p.second) {}
+  pair(pair&& p) : first(move(p.first)), second(move(p.second)) {}
+  pair& operator=(pair &&other) {
+    first = move(other.first);
+    second = move(other.second);
+    return *this;
+  }
+  T1 first;
+  T2 second;
+};
+
+}  // namespace std
+
+#endif  // THIRD_PARTY_NANOLIBC_CXX_UTILITY_

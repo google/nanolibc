@@ -1,0 +1,6 @@
+#ifndef _GNANOLIB_CXX_ASSERT_H_
+#define _GNANOLIB_CXX_ASSERT_H_
+
+#include <assert.h>
+
+#endif

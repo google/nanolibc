@@ -1,0 +1,14 @@
+TestAssign passed
+Constructor test passed
+TesstConstructors passed
+TestMethods passed
+TestResize passed
+TestRelationalOperators passed
+TestAdditionOperator passed
+TestIndexing passed
+TestIterators passed
+TesstWriteData  passed
+TestReplace passed
+TestToString passed
+PASSED
+# END TEST WITH RETVAL=0

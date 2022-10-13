@@ -1,0 +1,901 @@
+  (Computing sum 0..1 ...)
+  (Computed sum 0..1)
+Sum 0..1 = 1
+  (Computing sum 0..2 ...)
+  (Computed sum 0..2)
+Sum 0..2 = 3
+  (Computing sum 0..3 ...)
+  (Computed sum 0..3)
+Sum 0..3 = 6
+  (Computing sum 0..4 ...)
+  (Computed sum 0..4)
+Sum 0..4 = 10
+  (Computing sum 0..5 ...)
+  (Computed sum 0..5)
+Sum 0..5 = 15
+  (Computing sum 0..6 ...)
+  (Computed sum 0..6)
+Sum 0..6 = 21
+  (Computing sum 0..7 ...)
+  (Computed sum 0..7)
+Sum 0..7 = 28
+  (Computing sum 0..8 ...)
+  (Computed sum 0..8)
+Sum 0..8 = 36
+  (Computing sum 0..9 ...)
+  (Computed sum 0..9)
+Sum 0..9 = 45
+  (Computing sum 0..10 ...)
+  (Computed sum 0..10)
+Sum 0..10 = 55
+  (Computing sum 0..11 ...)
+  (Computed sum 0..11)
+Sum 0..11 = 66
+  (Computing sum 0..12 ...)
+  (Computed sum 0..12)
+Sum 0..12 = 78
+  (Computing sum 0..13 ...)
+  (Computed sum 0..13)
+Sum 0..13 = 91
+  (Computing sum 0..14 ...)
+  (Computed sum 0..14)
+Sum 0..14 = 105
+  (Computing sum 0..15 ...)
+  (Computed sum 0..15)
+Sum 0..15 = 120
+  (Computing sum 0..16 ...)
+  (Computed sum 0..16)
+Sum 0..16 = 136
+  (Computing sum 0..17 ...)
+  (Computed sum 0..17)
+Sum 0..17 = 153
+  (Computing sum 0..18 ...)
+  (Computed sum 0..18)
+Sum 0..18 = 171
+  (Computing sum 0..19 ...)
+  (Computed sum 0..19)
+Sum 0..19 = 190
+  (Computing sum 0..20 ...)
+  (Computed sum 0..20)
+Sum 0..20 = 210
+  (Computing sum 0..21 ...)
+  (Computed sum 0..21)
+Sum 0..21 = 231
+  (Computing sum 0..22 ...)
+  (Computed sum 0..22)
+Sum 0..22 = 253
+  (Computing sum 0..23 ...)
+  (Computed sum 0..23)
+Sum 0..23 = 276
+  (Computing sum 0..24 ...)
+  (Computed sum 0..24)
+Sum 0..24 = 300
+  (Computing sum 0..25 ...)
+  (Computed sum 0..25)
+Sum 0..25 = 325
+  (Computing sum 0..26 ...)
+  (Computed sum 0..26)
+Sum 0..26 = 351
+  (Computing sum 0..27 ...)
+  (Computed sum 0..27)
+Sum 0..27 = 378
+  (Computing sum 0..28 ...)
+  (Computed sum 0..28)
+Sum 0..28 = 406
+  (Computing sum 0..29 ...)
+  (Computed sum 0..29)
+Sum 0..29 = 435
+  (Computing sum 0..30 ...)
+  (Computed sum 0..30)
+Sum 0..30 = 465
+  (Computing sum 0..31 ...)
+  (Computed sum 0..31)
+Sum 0..31 = 496
+  (Computing sum 0..32 ...)
+  (Computed sum 0..32)
+Sum 0..32 = 528
+  (Computing sum 0..33 ...)
+  (Computed sum 0..33)
+Sum 0..33 = 561
+  (Computing sum 0..34 ...)
+  (Computed sum 0..34)
+Sum 0..34 = 595
+  (Computing sum 0..35 ...)
+  (Computed sum 0..35)
+Sum 0..35 = 630
+  (Computing sum 0..36 ...)
+  (Computed sum 0..36)
+Sum 0..36 = 666
+  (Computing sum 0..37 ...)
+  (Computed sum 0..37)
+Sum 0..37 = 703
+  (Computing sum 0..38 ...)
+  (Computed sum 0..38)
+Sum 0..38 = 741
+  (Computing sum 0..39 ...)
+  (Computed sum 0..39)
+Sum 0..39 = 780
+  (Computing sum 0..40 ...)
+  (Computed sum 0..40)
+Sum 0..40 = 820
+  (Computing sum 0..41 ...)
+  (Computed sum 0..41)
+Sum 0..41 = 861
+  (Computing sum 0..42 ...)
+  (Computed sum 0..42)
+Sum 0..42 = 903
+  (Computing sum 0..43 ...)
+  (Computed sum 0..43)
+Sum 0..43 = 946
+  (Computing sum 0..44 ...)
+  (Computed sum 0..44)
+Sum 0..44 = 990
+  (Computing sum 0..45 ...)
+  (Computed sum 0..45)
+Sum 0..45 = 1035
+  (Computing sum 0..46 ...)
+  (Computed sum 0..46)
+Sum 0..46 = 1081
+  (Computing sum 0..47 ...)
+  (Computed sum 0..47)
+Sum 0..47 = 1128
+  (Computing sum 0..48 ...)
+  (Computed sum 0..48)
+Sum 0..48 = 1176
+  (Computing sum 0..49 ...)
+  (Computed sum 0..49)
+Sum 0..49 = 1225
+  (Computing sum 0..50 ...)
+  (Computed sum 0..50)
+Sum 0..50 = 1275
+  (Computing sum 0..51 ...)
+  (Computed sum 0..51)
+Sum 0..51 = 1326
+  (Computing sum 0..52 ...)
+  (Computed sum 0..52)
+Sum 0..52 = 1378
+  (Computing sum 0..53 ...)
+  (Computed sum 0..53)
+Sum 0..53 = 1431
+  (Computing sum 0..54 ...)
+  (Computed sum 0..54)
+Sum 0..54 = 1485
+  (Computing sum 0..55 ...)
+  (Computed sum 0..55)
+Sum 0..55 = 1540
+  (Computing sum 0..56 ...)
+  (Computed sum 0..56)
+Sum 0..56 = 1596
+  (Computing sum 0..57 ...)
+  (Computed sum 0..57)
+Sum 0..57 = 1653
+  (Computing sum 0..58 ...)
+  (Computed sum 0..58)
+Sum 0..58 = 1711
+  (Computing sum 0..59 ...)
+  (Computed sum 0..59)
+Sum 0..59 = 1770
+  (Computing sum 0..60 ...)
+  (Computed sum 0..60)
+Sum 0..60 = 1830
+  (Computing sum 0..61 ...)
+  (Computed sum 0..61)
+Sum 0..61 = 1891
+  (Computing sum 0..62 ...)
+  (Computed sum 0..62)
+Sum 0..62 = 1953
+  (Computing sum 0..63 ...)
+  (Computed sum 0..63)
+Sum 0..63 = 2016
+  (Computing sum 0..64 ...)
+  (Computed sum 0..64)
+Sum 0..64 = 2080
+  (Computing sum 0..65 ...)
+  (Computed sum 0..65)
+Sum 0..65 = 2145
+  (Computing sum 0..66 ...)
+  (Computed sum 0..66)
+Sum 0..66 = 2211
+  (Computing sum 0..67 ...)
+  (Computed sum 0..67)
+Sum 0..67 = 2278
+  (Computing sum 0..68 ...)
+  (Computed sum 0..68)
+Sum 0..68 = 2346
+  (Computing sum 0..69 ...)
+  (Computed sum 0..69)
+Sum 0..69 = 2415
+  (Computing sum 0..70 ...)
+  (Computed sum 0..70)
+Sum 0..70 = 2485
+  (Computing sum 0..71 ...)
+  (Computed sum 0..71)
+Sum 0..71 = 2556
+  (Computing sum 0..72 ...)
+  (Computed sum 0..72)
+Sum 0..72 = 2628
+  (Computing sum 0..73 ...)
+  (Computed sum 0..73)
+Sum 0..73 = 2701
+  (Computing sum 0..74 ...)
+  (Computed sum 0..74)
+Sum 0..74 = 2775
+  (Computing sum 0..75 ...)
+  (Computed sum 0..75)
+Sum 0..75 = 2850
+  (Computing sum 0..76 ...)
+  (Computed sum 0..76)
+Sum 0..76 = 2926
+  (Computing sum 0..77 ...)
+  (Computed sum 0..77)
+Sum 0..77 = 3003
+  (Computing sum 0..78 ...)
+  (Computed sum 0..78)
+Sum 0..78 = 3081
+  (Computing sum 0..79 ...)
+  (Computed sum 0..79)
+Sum 0..79 = 3160
+  (Computing sum 0..80 ...)
+  (Computed sum 0..80)
+Sum 0..80 = 3240
+  (Computing sum 0..81 ...)
+  (Computed sum 0..81)
+Sum 0..81 = 3321
+  (Computing sum 0..82 ...)
+  (Computed sum 0..82)
+Sum 0..82 = 3403
+  (Computing sum 0..83 ...)
+  (Computed sum 0..83)
+Sum 0..83 = 3486
+  (Computing sum 0..84 ...)
+  (Computed sum 0..84)
+Sum 0..84 = 3570
+  (Computing sum 0..85 ...)
+  (Computed sum 0..85)
+Sum 0..85 = 3655
+  (Computing sum 0..86 ...)
+  (Computed sum 0..86)
+Sum 0..86 = 3741
+  (Computing sum 0..87 ...)
+  (Computed sum 0..87)
+Sum 0..87 = 3828
+  (Computing sum 0..88 ...)
+  (Computed sum 0..88)
+Sum 0..88 = 3916
+  (Computing sum 0..89 ...)
+  (Computed sum 0..89)
+Sum 0..89 = 4005
+  (Computing sum 0..90 ...)
+  (Computed sum 0..90)
+Sum 0..90 = 4095
+  (Computing sum 0..91 ...)
+  (Computed sum 0..91)
+Sum 0..91 = 4186
+  (Computing sum 0..92 ...)
+  (Computed sum 0..92)
+Sum 0..92 = 4278
+  (Computing sum 0..93 ...)
+  (Computed sum 0..93)
+Sum 0..93 = 4371
+  (Computing sum 0..94 ...)
+  (Computed sum 0..94)
+Sum 0..94 = 4465
+  (Computing sum 0..95 ...)
+  (Computed sum 0..95)
+Sum 0..95 = 4560
+  (Computing sum 0..96 ...)
+  (Computed sum 0..96)
+Sum 0..96 = 4656
+  (Computing sum 0..97 ...)
+  (Computed sum 0..97)
+Sum 0..97 = 4753
+  (Computing sum 0..98 ...)
+  (Computed sum 0..98)
+Sum 0..98 = 4851
+  (Computing sum 0..99 ...)
+  (Computed sum 0..99)
+Sum 0..99 = 4950
+  (Computing sum 0..100 ...)
+  (Computed sum 0..100)
+Sum 0..100 = 5050
+  (Computing sum 0..101 ...)
+  (Computed sum 0..101)
+Sum 0..101 = 5151
+  (Computing sum 0..102 ...)
+  (Computed sum 0..102)
+Sum 0..102 = 5253
+  (Computing sum 0..103 ...)
+  (Computed sum 0..103)
+Sum 0..103 = 5356
+  (Computing sum 0..104 ...)
+  (Computed sum 0..104)
+Sum 0..104 = 5460
+  (Computing sum 0..105 ...)
+  (Computed sum 0..105)
+Sum 0..105 = 5565
+  (Computing sum 0..106 ...)
+  (Computed sum 0..106)
+Sum 0..106 = 5671
+  (Computing sum 0..107 ...)
+  (Computed sum 0..107)
+Sum 0..107 = 5778
+  (Computing sum 0..108 ...)
+  (Computed sum 0..108)
+Sum 0..108 = 5886
+  (Computing sum 0..109 ...)
+  (Computed sum 0..109)
+Sum 0..109 = 5995
+  (Computing sum 0..110 ...)
+  (Computed sum 0..110)
+Sum 0..110 = 6105
+  (Computing sum 0..111 ...)
+  (Computed sum 0..111)
+Sum 0..111 = 6216
+  (Computing sum 0..112 ...)
+  (Computed sum 0..112)
+Sum 0..112 = 6328
+  (Computing sum 0..113 ...)
+  (Computed sum 0..113)
+Sum 0..113 = 6441
+  (Computing sum 0..114 ...)
+  (Computed sum 0..114)
+Sum 0..114 = 6555
+  (Computing sum 0..115 ...)
+  (Computed sum 0..115)
+Sum 0..115 = 6670
+  (Computing sum 0..116 ...)
+  (Computed sum 0..116)
+Sum 0..116 = 6786
+  (Computing sum 0..117 ...)
+  (Computed sum 0..117)
+Sum 0..117 = 6903
+  (Computing sum 0..118 ...)
+  (Computed sum 0..118)
+Sum 0..118 = 7021
+  (Computing sum 0..119 ...)
+  (Computed sum 0..119)
+Sum 0..119 = 7140
+  (Computing sum 0..120 ...)
+  (Computed sum 0..120)
+Sum 0..120 = 7260
+  (Computing sum 0..121 ...)
+  (Computed sum 0..121)
+Sum 0..121 = 7381
+  (Computing sum 0..122 ...)
+  (Computed sum 0..122)
+Sum 0..122 = 7503
+  (Computing sum 0..123 ...)
+  (Computed sum 0..123)
+Sum 0..123 = 7626
+  (Computing sum 0..124 ...)
+  (Computed sum 0..124)
+Sum 0..124 = 7750
+  (Computing sum 0..125 ...)
+  (Computed sum 0..125)
+Sum 0..125 = 7875
+  (Computing sum 0..126 ...)
+  (Computed sum 0..126)
+Sum 0..126 = 8001
+  (Computing sum 0..127 ...)
+  (Computed sum 0..127)
+Sum 0..127 = 8128
+  (Computing sum 0..128 ...)
+  (Computed sum 0..128)
+Sum 0..128 = 8256
+  (Computing sum 0..129 ...)
+  (Computed sum 0..129)
+Sum 0..129 = 8385
+  (Computing sum 0..130 ...)
+  (Computed sum 0..130)
+Sum 0..130 = 8515
+  (Computing sum 0..131 ...)
+  (Computed sum 0..131)
+Sum 0..131 = 8646
+  (Computing sum 0..132 ...)
+  (Computed sum 0..132)
+Sum 0..132 = 8778
+  (Computing sum 0..133 ...)
+  (Computed sum 0..133)
+Sum 0..133 = 8911
+  (Computing sum 0..134 ...)
+  (Computed sum 0..134)
+Sum 0..134 = 9045
+  (Computing sum 0..135 ...)
+  (Computed sum 0..135)
+Sum 0..135 = 9180
+  (Computing sum 0..136 ...)
+  (Computed sum 0..136)
+Sum 0..136 = 9316
+  (Computing sum 0..137 ...)
+  (Computed sum 0..137)
+Sum 0..137 = 9453
+  (Computing sum 0..138 ...)
+  (Computed sum 0..138)
+Sum 0..138 = 9591
+  (Computing sum 0..139 ...)
+  (Computed sum 0..139)
+Sum 0..139 = 9730
+  (Computing sum 0..140 ...)
+  (Computed sum 0..140)
+Sum 0..140 = 9870
+  (Computing sum 0..141 ...)
+  (Computed sum 0..141)
+Sum 0..141 = 10011
+  (Computing sum 0..142 ...)
+  (Computed sum 0..142)
+Sum 0..142 = 10153
+  (Computing sum 0..143 ...)
+  (Computed sum 0..143)
+Sum 0..143 = 10296
+  (Computing sum 0..144 ...)
+  (Computed sum 0..144)
+Sum 0..144 = 10440
+  (Computing sum 0..145 ...)
+  (Computed sum 0..145)
+Sum 0..145 = 10585
+  (Computing sum 0..146 ...)
+  (Computed sum 0..146)
+Sum 0..146 = 10731
+  (Computing sum 0..147 ...)
+  (Computed sum 0..147)
+Sum 0..147 = 10878
+  (Computing sum 0..148 ...)
+  (Computed sum 0..148)
+Sum 0..148 = 11026
+  (Computing sum 0..149 ...)
+  (Computed sum 0..149)
+Sum 0..149 = 11175
+  (Computing sum 0..150 ...)
+  (Computed sum 0..150)
+Sum 0..150 = 11325
+  (Computing sum 0..151 ...)
+  (Computed sum 0..151)
+Sum 0..151 = 11476
+  (Computing sum 0..152 ...)
+  (Computed sum 0..152)
+Sum 0..152 = 11628
+  (Computing sum 0..153 ...)
+  (Computed sum 0..153)
+Sum 0..153 = 11781
+  (Computing sum 0..154 ...)
+  (Computed sum 0..154)
+Sum 0..154 = 11935
+  (Computing sum 0..155 ...)
+  (Computed sum 0..155)
+Sum 0..155 = 12090
+  (Computing sum 0..156 ...)
+  (Computed sum 0..156)
+Sum 0..156 = 12246
+  (Computing sum 0..157 ...)
+  (Computed sum 0..157)
+Sum 0..157 = 12403
+  (Computing sum 0..158 ...)
+  (Computed sum 0..158)
+Sum 0..158 = 12561
+  (Computing sum 0..159 ...)
+  (Computed sum 0..159)
+Sum 0..159 = 12720
+  (Computing sum 0..160 ...)
+  (Computed sum 0..160)
+Sum 0..160 = 12880
+  (Computing sum 0..161 ...)
+  (Computed sum 0..161)
+Sum 0..161 = 13041
+  (Computing sum 0..162 ...)
+  (Computed sum 0..162)
+Sum 0..162 = 13203
+  (Computing sum 0..163 ...)
+  (Computed sum 0..163)
+Sum 0..163 = 13366
+  (Computing sum 0..164 ...)
+  (Computed sum 0..164)
+Sum 0..164 = 13530
+  (Computing sum 0..165 ...)
+  (Computed sum 0..165)
+Sum 0..165 = 13695
+  (Computing sum 0..166 ...)
+  (Computed sum 0..166)
+Sum 0..166 = 13861
+  (Computing sum 0..167 ...)
+  (Computed sum 0..167)
+Sum 0..167 = 14028
+  (Computing sum 0..168 ...)
+  (Computed sum 0..168)
+Sum 0..168 = 14196
+  (Computing sum 0..169 ...)
+  (Computed sum 0..169)
+Sum 0..169 = 14365
+  (Computing sum 0..170 ...)
+  (Computed sum 0..170)
+Sum 0..170 = 14535
+  (Computing sum 0..171 ...)
+  (Computed sum 0..171)
+Sum 0..171 = 14706
+  (Computing sum 0..172 ...)
+  (Computed sum 0..172)
+Sum 0..172 = 14878
+  (Computing sum 0..173 ...)
+  (Computed sum 0..173)
+Sum 0..173 = 15051
+  (Computing sum 0..174 ...)
+  (Computed sum 0..174)
+Sum 0..174 = 15225
+  (Computing sum 0..175 ...)
+  (Computed sum 0..175)
+Sum 0..175 = 15400
+  (Computing sum 0..176 ...)
+  (Computed sum 0..176)
+Sum 0..176 = 15576
+  (Computing sum 0..177 ...)
+  (Computed sum 0..177)
+Sum 0..177 = 15753
+  (Computing sum 0..178 ...)
+  (Computed sum 0..178)
+Sum 0..178 = 15931
+  (Computing sum 0..179 ...)
+  (Computed sum 0..179)
+Sum 0..179 = 16110
+  (Computing sum 0..180 ...)
+  (Computed sum 0..180)
+Sum 0..180 = 16290
+  (Computing sum 0..181 ...)
+  (Computed sum 0..181)
+Sum 0..181 = 16471
+  (Computing sum 0..182 ...)
+  (Computed sum 0..182)
+Sum 0..182 = 16653
+  (Computing sum 0..183 ...)
+  (Computed sum 0..183)
+Sum 0..183 = 16836
+  (Computing sum 0..184 ...)
+  (Computed sum 0..184)
+Sum 0..184 = 17020
+  (Computing sum 0..185 ...)
+  (Computed sum 0..185)
+Sum 0..185 = 17205
+  (Computing sum 0..186 ...)
+  (Computed sum 0..186)
+Sum 0..186 = 17391
+  (Computing sum 0..187 ...)
+  (Computed sum 0..187)
+Sum 0..187 = 17578
+  (Computing sum 0..188 ...)
+  (Computed sum 0..188)
+Sum 0..188 = 17766
+  (Computing sum 0..189 ...)
+  (Computed sum 0..189)
+Sum 0..189 = 17955
+  (Computing sum 0..190 ...)
+  (Computed sum 0..190)
+Sum 0..190 = 18145
+  (Computing sum 0..191 ...)
+  (Computed sum 0..191)
+Sum 0..191 = 18336
+  (Computing sum 0..192 ...)
+  (Computed sum 0..192)
+Sum 0..192 = 18528
+  (Computing sum 0..193 ...)
+  (Computed sum 0..193)
+Sum 0..193 = 18721
+  (Computing sum 0..194 ...)
+  (Computed sum 0..194)
+Sum 0..194 = 18915
+  (Computing sum 0..195 ...)
+  (Computed sum 0..195)
+Sum 0..195 = 19110
+  (Computing sum 0..196 ...)
+  (Computed sum 0..196)
+Sum 0..196 = 19306
+  (Computing sum 0..197 ...)
+  (Computed sum 0..197)
+Sum 0..197 = 19503
+  (Computing sum 0..198 ...)
+  (Computed sum 0..198)
+Sum 0..198 = 19701
+  (Computing sum 0..199 ...)
+  (Computed sum 0..199)
+Sum 0..199 = 19900
+  (Computing sum 0..200 ...)
+  (Computed sum 0..200)
+Sum 0..200 = 20100
+  (Computing sum 0..201 ...)
+  (Computed sum 0..201)
+Sum 0..201 = 20301
+  (Computing sum 0..202 ...)
+  (Computed sum 0..202)
+Sum 0..202 = 20503
+  (Computing sum 0..203 ...)
+  (Computed sum 0..203)
+Sum 0..203 = 20706
+  (Computing sum 0..204 ...)
+  (Computed sum 0..204)
+Sum 0..204 = 20910
+  (Computing sum 0..205 ...)
+  (Computed sum 0..205)
+Sum 0..205 = 21115
+  (Computing sum 0..206 ...)
+  (Computed sum 0..206)
+Sum 0..206 = 21321
+  (Computing sum 0..207 ...)
+  (Computed sum 0..207)
+Sum 0..207 = 21528
+  (Computing sum 0..208 ...)
+  (Computed sum 0..208)
+Sum 0..208 = 21736
+  (Computing sum 0..209 ...)
+  (Computed sum 0..209)
+Sum 0..209 = 21945
+  (Computing sum 0..210 ...)
+  (Computed sum 0..210)
+Sum 0..210 = 22155
+  (Computing sum 0..211 ...)
+  (Computed sum 0..211)
+Sum 0..211 = 22366
+  (Computing sum 0..212 ...)
+  (Computed sum 0..212)
+Sum 0..212 = 22578
+  (Computing sum 0..213 ...)
+  (Computed sum 0..213)
+Sum 0..213 = 22791
+  (Computing sum 0..214 ...)
+  (Computed sum 0..214)
+Sum 0..214 = 23005
+  (Computing sum 0..215 ...)
+  (Computed sum 0..215)
+Sum 0..215 = 23220
+  (Computing sum 0..216 ...)
+  (Computed sum 0..216)
+Sum 0..216 = 23436
+  (Computing sum 0..217 ...)
+  (Computed sum 0..217)
+Sum 0..217 = 23653
+  (Computing sum 0..218 ...)
+  (Computed sum 0..218)
+Sum 0..218 = 23871
+  (Computing sum 0..219 ...)
+  (Computed sum 0..219)
+Sum 0..219 = 24090
+  (Computing sum 0..220 ...)
+  (Computed sum 0..220)
+Sum 0..220 = 24310
+  (Computing sum 0..221 ...)
+  (Computed sum 0..221)
+Sum 0..221 = 24531
+  (Computing sum 0..222 ...)
+  (Computed sum 0..222)
+Sum 0..222 = 24753
+  (Computing sum 0..223 ...)
+  (Computed sum 0..223)
+Sum 0..223 = 24976
+  (Computing sum 0..224 ...)
+  (Computed sum 0..224)
+Sum 0..224 = 25200
+  (Computing sum 0..225 ...)
+  (Computed sum 0..225)
+Sum 0..225 = 25425
+  (Computing sum 0..226 ...)
+  (Computed sum 0..226)
+Sum 0..226 = 25651
+  (Computing sum 0..227 ...)
+  (Computed sum 0..227)
+Sum 0..227 = 25878
+  (Computing sum 0..228 ...)
+  (Computed sum 0..228)
+Sum 0..228 = 26106
+  (Computing sum 0..229 ...)
+  (Computed sum 0..229)
+Sum 0..229 = 26335
+  (Computing sum 0..230 ...)
+  (Computed sum 0..230)
+Sum 0..230 = 26565
+  (Computing sum 0..231 ...)
+  (Computed sum 0..231)
+Sum 0..231 = 26796
+  (Computing sum 0..232 ...)
+  (Computed sum 0..232)
+Sum 0..232 = 27028
+  (Computing sum 0..233 ...)
+  (Computed sum 0..233)
+Sum 0..233 = 27261
+  (Computing sum 0..234 ...)
+  (Computed sum 0..234)
+Sum 0..234 = 27495
+  (Computing sum 0..235 ...)
+  (Computed sum 0..235)
+Sum 0..235 = 27730
+  (Computing sum 0..236 ...)
+  (Computed sum 0..236)
+Sum 0..236 = 27966
+  (Computing sum 0..237 ...)
+  (Computed sum 0..237)
+Sum 0..237 = 28203
+  (Computing sum 0..238 ...)
+  (Computed sum 0..238)
+Sum 0..238 = 28441
+  (Computing sum 0..239 ...)
+  (Computed sum 0..239)
+Sum 0..239 = 28680
+  (Computing sum 0..240 ...)
+  (Computed sum 0..240)
+Sum 0..240 = 28920
+  (Computing sum 0..241 ...)
+  (Computed sum 0..241)
+Sum 0..241 = 29161
+  (Computing sum 0..242 ...)
+  (Computed sum 0..242)
+Sum 0..242 = 29403
+  (Computing sum 0..243 ...)
+  (Computed sum 0..243)
+Sum 0..243 = 29646
+  (Computing sum 0..244 ...)
+  (Computed sum 0..244)
+Sum 0..244 = 29890
+  (Computing sum 0..245 ...)
+  (Computed sum 0..245)
+Sum 0..245 = 30135
+  (Computing sum 0..246 ...)
+  (Computed sum 0..246)
+Sum 0..246 = 30381
+  (Computing sum 0..247 ...)
+  (Computed sum 0..247)
+Sum 0..247 = 30628
+  (Computing sum 0..248 ...)
+  (Computed sum 0..248)
+Sum 0..248 = 30876
+  (Computing sum 0..249 ...)
+  (Computed sum 0..249)
+Sum 0..249 = 31125
+  (Computing sum 0..250 ...)
+  (Computed sum 0..250)
+Sum 0..250 = 31375
+  (Computing sum 0..251 ...)
+  (Computed sum 0..251)
+Sum 0..251 = 31626
+  (Computing sum 0..252 ...)
+  (Computed sum 0..252)
+Sum 0..252 = 31878
+  (Computing sum 0..253 ...)
+  (Computed sum 0..253)
+Sum 0..253 = 32131
+  (Computing sum 0..254 ...)
+  (Computed sum 0..254)
+Sum 0..254 = 32385
+  (Computing sum 0..255 ...)
+  (Computed sum 0..255)
+Sum 0..255 = 32640
+  (Computing sum 0..256 ...)
+  (Computed sum 0..256)
+Sum 0..256 = 32896
+  (Computing sum 0..257 ...)
+  (Computed sum 0..257)
+Sum 0..257 = 33153
+  (Computing sum 0..258 ...)
+  (Computed sum 0..258)
+Sum 0..258 = 33411
+  (Computing sum 0..259 ...)
+  (Computed sum 0..259)
+Sum 0..259 = 33670
+  (Computing sum 0..260 ...)
+  (Computed sum 0..260)
+Sum 0..260 = 33930
+  (Computing sum 0..261 ...)
+  (Computed sum 0..261)
+Sum 0..261 = 34191
+  (Computing sum 0..262 ...)
+  (Computed sum 0..262)
+Sum 0..262 = 34453
+  (Computing sum 0..263 ...)
+  (Computed sum 0..263)
+Sum 0..263 = 34716
+  (Computing sum 0..264 ...)
+  (Computed sum 0..264)
+Sum 0..264 = 34980
+  (Computing sum 0..265 ...)
+  (Computed sum 0..265)
+Sum 0..265 = 35245
+  (Computing sum 0..266 ...)
+  (Computed sum 0..266)
+Sum 0..266 = 35511
+  (Computing sum 0..267 ...)
+  (Computed sum 0..267)
+Sum 0..267 = 35778
+  (Computing sum 0..268 ...)
+  (Computed sum 0..268)
+Sum 0..268 = 36046
+  (Computing sum 0..269 ...)
+  (Computed sum 0..269)
+Sum 0..269 = 36315
+  (Computing sum 0..270 ...)
+  (Computed sum 0..270)
+Sum 0..270 = 36585
+  (Computing sum 0..271 ...)
+  (Computed sum 0..271)
+Sum 0..271 = 36856
+  (Computing sum 0..272 ...)
+  (Computed sum 0..272)
+Sum 0..272 = 37128
+  (Computing sum 0..273 ...)
+  (Computed sum 0..273)
+Sum 0..273 = 37401
+  (Computing sum 0..274 ...)
+  (Computed sum 0..274)
+Sum 0..274 = 37675
+  (Computing sum 0..275 ...)
+  (Computed sum 0..275)
+Sum 0..275 = 37950
+  (Computing sum 0..276 ...)
+  (Computed sum 0..276)
+Sum 0..276 = 38226
+  (Computing sum 0..277 ...)
+  (Computed sum 0..277)
+Sum 0..277 = 38503
+  (Computing sum 0..278 ...)
+  (Computed sum 0..278)
+Sum 0..278 = 38781
+  (Computing sum 0..279 ...)
+  (Computed sum 0..279)
+Sum 0..279 = 39060
+  (Computing sum 0..280 ...)
+  (Computed sum 0..280)
+Sum 0..280 = 39340
+  (Computing sum 0..281 ...)
+  (Computed sum 0..281)
+Sum 0..281 = 39621
+  (Computing sum 0..282 ...)
+  (Computed sum 0..282)
+Sum 0..282 = 39903
+  (Computing sum 0..283 ...)
+  (Computed sum 0..283)
+Sum 0..283 = 40186
+  (Computing sum 0..284 ...)
+  (Computed sum 0..284)
+Sum 0..284 = 40470
+  (Computing sum 0..285 ...)
+  (Computed sum 0..285)
+Sum 0..285 = 40755
+  (Computing sum 0..286 ...)
+  (Computed sum 0..286)
+Sum 0..286 = 41041
+  (Computing sum 0..287 ...)
+  (Computed sum 0..287)
+Sum 0..287 = 41328
+  (Computing sum 0..288 ...)
+  (Computed sum 0..288)
+Sum 0..288 = 41616
+  (Computing sum 0..289 ...)
+  (Computed sum 0..289)
+Sum 0..289 = 41905
+  (Computing sum 0..290 ...)
+  (Computed sum 0..290)
+Sum 0..290 = 42195
+  (Computing sum 0..291 ...)
+  (Computed sum 0..291)
+Sum 0..291 = 42486
+  (Computing sum 0..292 ...)
+  (Computed sum 0..292)
+Sum 0..292 = 42778
+  (Computing sum 0..293 ...)
+  (Computed sum 0..293)
+Sum 0..293 = 43071
+  (Computing sum 0..294 ...)
+  (Computed sum 0..294)
+Sum 0..294 = 43365
+  (Computing sum 0..295 ...)
+  (Computed sum 0..295)
+Sum 0..295 = 43660
+  (Computing sum 0..296 ...)
+  (Computed sum 0..296)
+Sum 0..296 = 43956
+  (Computing sum 0..297 ...)
+  (Computed sum 0..297)
+Sum 0..297 = 44253
+  (Computing sum 0..298 ...)
+  (Computed sum 0..298)
+Sum 0..298 = 44551
+  (Computing sum 0..299 ...)
+  (Computed sum 0..299)
+Sum 0..299 = 44850
+  (Computing sum 0..300 ...)
+  (Computed sum 0..300)
+Sum 0..300 = 45150
+# END TEST WITH RETVAL=0

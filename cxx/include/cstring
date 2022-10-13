@@ -1,0 +1,6 @@
+#ifndef _GNANOLIB_CXX_STRING_H_
+#define _GNANOLIB_CXX_STRING_H_
+
+#include <string.h>
+
+#endif

@@ -1,0 +1,7 @@
+presubmit: {
+  review_notify: "bios_devel+reviews"
+  check_tests: {
+    failure_status: ERROR
+    project: "third_party.gnu_efi"
+  }
+}

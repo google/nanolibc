@@ -1,0 +1,33 @@
+/*
+ * Incomplete <algorithm> templates. This allows to compile-in calls
+ * to some STL algorithms, but actually calling them will cause the
+ * program to exit.
+ */
+#ifndef THIRD_PARTY_NANOLIBC_CXX_NOIMPL_ALGORITHM_
+#define THIRD_PARTY_NANOLIBC_CXX_NOIMPL_ALGORITHM_
+
+#include <cassert>
+#include <cstddef>
+#include <sys/types.h>
+
+namespace std {
+
+template <class RandomAccessIterator>
+void sort (RandomAccessIterator first, RandomAccessIterator last) {
+  (void) first;
+  (void) last;
+  assert(!"not implemented");
+}
+
+template <class RandomAccessIterator, class Compare>
+  void sort (RandomAccessIterator first, RandomAccessIterator last,
+             Compare comp) {
+  (void) first;
+  (void) last;
+  (void) comp;
+  assert(!"not implemented");
+}
+
+} // namespace std
+
+#endif  // THIRD_PARTY_NANOLIBC_CXX_NOIMPL_ALGORITHM_

@@ -1,0 +1,6 @@
+#ifndef _GNANOLIB_CXX_STDDEF_H_
+#define _GNANOLIB_CXX_STDDEH_H_
+
+#include <stddef.h>
+
+#endif
